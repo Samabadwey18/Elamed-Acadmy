@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+.a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-size: 18px;
+    padding-bottom:5px ;
+    font-size: -webkit-xxx-large;
+}
+.a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin:right ;
+    transition: transform 0.3s ease;
+}
+.a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/* Header styles */
+.header {
+    background-color: #2F539B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+}
+
+.logo {
+    width: 91px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li .a {
+    color: white;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 0.5rem;
+    font-family: 'Roboto Slab', serif;
+    font-size: -webkit-xxx-large;
+}
+
+/* Hero section */
+#photo {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(200deg, #2F539B, #ffffff00), url("WhatsApp\ Image\ 2024-10-24\ at\ 22.49.38_ece6986b.jpg");
+}
+.right-side{
+    margin-right: 550px;
+    font-weight: bold;
+    font-family: cairo;
+    font-size: -webkit-xxx-large;
+}
+.h3 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-family: cairo;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-family: cairo;
+    text-align: right;
+}
+
+/* Courses section */
+.choices {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-family: cairo;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.divs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.all-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 2px solid black;
+    box-shadow: 0px 10px 20px 5px #689aff;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.all-img:hover {
+    transform: scale(1.05);
+}
+
+.the-word {
+    font-size: clamp(1.25rem, 3vw, 2.5rem);
+    font-family: cairo;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Course details sections */
+#section {
+    background: #45a9f0;
+    padding: 2rem;
+}
+
+.rescue, .free-swimming, .fins-swimming, .old-swimming, .captains {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+    .rescue, .free-swimming, .fins-swimming, .old-swimming, .captains {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    box-shadow: 0px 10px 20px 5px #689aff;
+}
+
+.paragraphs, .free-swimming div, .fins-swimming div, .old-swimming div, .captains div {
+    font-size: clamp(1rem, 2.5vw, 1.75rem);
+    font-family: cairo;
+    flex: 1;
+}
+
+/* Big word section */
+.big-word {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-family: 'Londrina Sketch', cursive;
+    background: linear-gradient(white, #B6B6B4);
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 90%;
+    border: 2px solid black;
+}
+
+/* Footer section */
+#last-section {
+    background: linear-gradient(white, #2F539B);
+    padding: 2rem;
+}
+
+.last-word {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-family: cairo;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.last-class, .h6 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* RTL Support */
+[dir="rtl"] .header,
+[dir="rtl"] .h3,
+[dir="rtl"] .h1,
+[dir="rtl"] .choices {
+    text-align: right;
+}
+.right-side{
+    text-align: end;
+}
+.right-side2{
+text-align: center;
+font-size: -webkit-xxx-large;
+font-family: cairo;
+}
+.p1{
+    text-align: end; 
+}
+.oo{
+    text-align: end;
+}
+.right-side3{
+    text-align: center;
+font-size: -webkit-xxx-large;
+font-family: cairo;
+}
+.kl{
+    text-align: end;
+}
+.right-side4{
+    text-align: center;
+font-size: -webkit-xxx-large;
+font-family: cairo;
+}
+.mm{
+    text-align: end
+}
+.right-side5{
+    text-align: center;
+    font-size: -webkit-xxx-large;
+    font-family: cairo;
+}
+.vv{
+    text-align: end
+}
+/* ... (previous styles remain the same) ... */
+
+/* Contact Button Styles */
+.button {
+    font-family: 'Cairo', sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(45deg, #2F539B, #45a9f0);
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    margin: 2rem auto;
+    max-width: 90%;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #45a9f0, #2F539B);
+}
+
+/* Active state */
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ripple effect */
+.button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease-out, height 0.6s ease-out;
+}
+
+.button:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .button {
+        padding: 0.8rem 2rem;
+        margin: 1.5rem auto;
+    }
+}
+
+/* For extra small devices */
+@media (max-width: 480px) {
+    .button {
+        padding: 0.7rem 1.5rem;
+        margin: 1rem auto;
+    }
+}
+/* Add these to your existing CSS */
+html {
+    scroll-behavior: smooth;
+}
+
+#contact-section {
+    scroll-margin-top: 80px; /* Adjusts scroll position to account for fixed header if needed */
+}
+
+/* Optional: Add a highlight effect when scrolled to */
+#contact-section:target {
+    animation: highlight 1s ease-out;
+}
+
+@keyframes highlight {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* If you have a fixed header, adjust this value */
+@media (max-width: 768px) {
+    #contact-section {
+        scroll-margin-top: 60px;
+    }
+}
